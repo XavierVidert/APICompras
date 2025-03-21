@@ -1,19 +1,29 @@
 package com.example.Compras.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name ="compra")
 public class M_Compra {
 
-private String min;
-private String max;
-private String produto;
-private String quantidade;
-private String custo_medio;
-private String ltima_compra;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String min;
+    private String max;
+    private String produto;
+    private String quantidade;
+    private String custo_medio;
+    private String ltima_compra;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getMin() {
         return min;
