@@ -1,33 +1,43 @@
 package com.example.Compras.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name ="compra")
 public class M_Compra {
 
-private String min;
-private String max;
-private String produto;
-private String quantidade;
-private String custo_medio;
-private String ltima_compra;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private Integer min;
+    private Integer max;
+    private String produto;
+    private Integer quantidade;
+    private Integer custo_medio;
+    private String ultima_compra;
 
-    public String getMin() {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getMin() {
         return min;
     }
 
-    public void setMin(String min) {
+    public void setMin(Integer min) {
         this.min = min;
     }
 
-    public String getMax() {
+    public Integer getMax() {
         return max;
     }
 
-    public void setMax(String max) {
+    public void setMax(Integer max) {
         this.max = max;
     }
 
@@ -39,27 +49,27 @@ private String ltima_compra;
         this.produto = produto;
     }
 
-    public String getQuantidade() {
+    public Integer getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
 
-    public String getCusto_medio() {
+    public Integer getCusto_medio() {
         return custo_medio;
     }
 
-    public void setCusto_medio(String custo_medio) {
+    public void setCusto_medio(Integer custo_medio) {
         this.custo_medio = custo_medio;
     }
 
-    public String getLtima_compra() {
-        return ltima_compra;
+    public String getUltima_compra() {
+        return ultima_compra;
     }
 
-    public void setLtima_compra(String ltima_compra) {
-        this.ltima_compra = ltima_compra;
+    public void setUltima_compra(String ultima_compra) {
+        this.ultima_compra = ultima_compra;
     }
 }

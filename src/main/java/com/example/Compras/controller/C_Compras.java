@@ -13,8 +13,9 @@ public class C_Compras {
         this.s_compras = s_compras;
     }
     @GetMapping("/")
-    public String index(){
-        s_compras.getAPIdata("2025-03-18");
+    public String index() throws Exception{
+        s_compras.getAPIData("2025-03-21");
+
         return "index";
     }
 }
