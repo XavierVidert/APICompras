@@ -1,0 +1,51 @@
+<div class="dados mt-3">
+    <div th:each="hotel : ${hoteis}">
+        <h1 th:text="${hotel.usuario.Nome}"></h1>
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Produto</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Quantidade</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Min</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Max</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Custo Médio</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Ultima Compra</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4></h4>
+            </div>
+        </div>
+        <div class="row" th:each="produto : ${hotel.produtos}">
+            <div class="col-md-2">
+                <h4 th:text="${produto.produto}"></h4>
+            </div>
+            <div class="col-md-2">
+                <h4 th:text="${produto.quantidade}"></h4>
+            </div>
+            <div class="col-md-2">
+                <h4 th:text="${produto.min}"></h4>
+            </div>
+            <div class="col-md-2">
+                <h4 th:text="${produto.max}"></h4>
+            </div>
+            <div class="col-md-2">
+                <h4 th:text="${produto.custo_medio}"></h4>
+            </div>
+            <div class="col-md-2">
+                <h4 th:text="${produto.ultima_compra != null ? produto.ultima_compra : 'Tem Não'}"></h4>
+            </div>
+        </div>
+        <div class="espaco"></div>
+    </div>
+</div>

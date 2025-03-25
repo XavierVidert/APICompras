@@ -27,10 +27,10 @@ public class S_Cadastro {
 
         if (podeSalvar) {
             M_Usuario m_usuario = new M_Usuario();
-            m_usuario.setNome(Nome);
+             m_usuario.setNome(Nome);
             m_usuario.setURL(URL);
             return r_usuario.save(m_usuario);
         }
         return null;
-    }
+   }
 }

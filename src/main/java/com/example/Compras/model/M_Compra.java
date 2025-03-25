@@ -4,7 +4,7 @@ package com.example.Compras.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name ="compra")
+@Table(schema = "compras",name ="compra")
 public class M_Compra {
 
     @Id

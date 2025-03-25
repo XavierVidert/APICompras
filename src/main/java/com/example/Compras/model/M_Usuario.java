@@ -3,8 +3,7 @@ package com.example.Compras.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(
-        name="hoteis",
+@Table( schema = "compras",name="hoteis",
         uniqueConstraints = {
         @UniqueConstraint(columnNames = {"usuario"})
         })
